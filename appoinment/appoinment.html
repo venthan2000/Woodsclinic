@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Booking ||online treatment|| Wood Clinic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+<link rel="manifest" href="../favicon_io/site.webmanifest"> <style>
+    
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom CSS styles */
+        video {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            width: 350px;
+            height: 350px;
+        }
+
+        .img {
+            background-size: cover;
+            width: 850px;
+            border-radius: 50px;
+        }
+
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #222 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #799f0c !important;
+        }
+
+        .book {
+            background-color: green;
+            color: #fff;
+            margin-left: 0px;
+        }
+
+        .navbar-toggler {
+            background-color: #fff;
+            box-shadow: 0 1px 5px 2px rgba(0, 128, 0, 0.3);
+            /* Adjust the last value for transparency */
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../imgs/logo.jpg" alt="" style="width: 50px; border-radius: 20px" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile/profile.html">Profile</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#video">Video</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://g.co/kgs/AYyU3gC" target="_blank">Reviews</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="dropdown-item" href="../services/jointpain.html">Joint and Muscle Pain</a>
+            <a class="dropdown-item" href="../services/diabites.html">Diabetes</a>
+            <a class="dropdown-item" href="../services/BP.html">Blood Pressure</a>
+            <a class="dropdown-item" href="../services/res.html">Respiratory Issues</a>
+            <a class="dropdown-item" href="https://koventhanfreelance.github.io/WoodsClinic/index.html#service" style="text-decoration: underline; color: green;">More</a>
+          </div>
+        </li>
+                    <li class="nav-item">
+                        <a href="#appointment" class="btn btn-primary book">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Appointment Booking Section -->
+    <section id="appointment" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <h2 class="mb-4">Book an Appointment</h2>
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">WhatsApp no:</label>
+                            <input type="tel" class="form-control" id="mobile" required pattern="^\+?[0-9\s\-\(\)]{10,20}$"
+                                title="Please enter a valid phone number " />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="slot_3">Mode:</label>
+                            <select class="form-control" id="slot_3" required>
+                                <option value="Select">Select Mode</option>
+                                <option value="Online">Online</option>
+                                <option value="Offline">Offline</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="slot">Select Date:</label>
+                        <input type="date" class="form-control" id="slot" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="slot_2">Time Slot:</label>
+                            <select class="form-control" id="slot_2" required>
+                                <option value="Select">Select Time</option>
+                                <option value="9 am - 11 am">9 am - 11 am</option>
+                                <option value="11 am - 2 pm">11 am - 2 pm</option>
+                                <option value="4:30 pm - 6:30 pm">4:30 pm - 6:30 pm</option>
+                                <option value="6:30 pm - 9:30 pm">6:30 pm - 9:30 pm</option>
+                                
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="text-center">
+                        <!-- Contact details -->
+                        <h4>Contact :</h4>
+                        <p>Phone: <a href="tel:+919361692951">+919361692951</a></p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3887.150093764976!2d80.26991697484237!3d13.026112287294287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3a5267ca9ee92921%3A0x3e972dcc298da08b!2sNew%20No.123%2C%20Old%2C%20WOODS%2C%20Dr%20Mercy%20Thomas%2C%2073%2C%202nd%20Trust%20Main%20Rd%2C%20Mandavelipakkam%2C%20Raja%20Annamalai%20Puram%2C%20Chennai%2C%20Tamil%20Nadu%20600028!3m2!1d13.0261123!2d80.27249189999999!5e0!3m2!1sen!2sin!4v1722933680800!5m2!1sen!2sin"
+                            width="100%" height="350" style="border: 0;" allowfullscreen=""
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p>Address: New No.123, 73, 2nd Trust Main Rd, <br />Mandavelipakkam, Tamil Nadu, Chennai: 600028
+                        </p>
+                         <p>Follow Us On:
+                        </p>
+                           <!-- Social Media Icons using Bootstrap -->
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-auto">
+                  <a href="https://youtube.com/@mercythomas7470?si=1Uc7Vuy94geKy8o6" target="_blank">
+                    <i class="fab fa-youtube text-danger" style="font-size:1.5rem;"></i>
+                  </a>
+                </div>
+                <div class="col-auto">
+                  <a href="https://www.instagram.com/dr.woodsclinic?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <i class="fab fa-instagram text-pink" style="font-size:1.5rem; color:#fe0163;"></i>
+                  </a>
+                </div>
+              </div>
+            </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3" style="margin-top: 120px">
+        <p>&copy; 2024 Woods Clinic. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Load booked slots from local storage
+        const bookedSlots = JSON.parse(localStorage.getItem("bookedSlots")) || {};
+document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const slot = document.getElementById("slot").value;
+    const slot_2 = document.getElementById("slot_2").value;
+    const slot_3 = document.getElementById("slot_3").value;
+
+    // Check if the user selected the default option
+    if (slot === "Select") {
+        alert("Please select a valid day.");
+        return;
+    }
+
+    if (slot_2 === "Select") {
+        alert("Please select a valid time slot.");
+        return;
+    }
+
+    if (slot_3 === "Select") {
+        alert("Please select a valid mode.");
+        return;
+    }
+
+    const ownerWhatsApp = "+919361692951";
+    const userWhatsApp = mobile; // Assuming this is the user's WhatsApp number
+
+    const bookingDetails = `Booking Details:
+        Name: ${name}
+        Mobile: ${mobile}
+        Day: ${slot}
+        Time Slot: ${slot_2}
+        Mode: ${slot_3}`;
+
+    alert("Please click the WhatsApp web option if you are using desktop on the next step!");
+
+    // Send details to owner's WhatsApp
+    window.open(
+        `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`,
+        "_blank"
+    );
+
+    // Send details to user's WhatsApp after a short delay
+    setTimeout(function () {
+        window.open(
+            `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`,
+            "_blank"
+        );
+        
+        // Reset the form
+        document.getElementById("appointmentForm").reset();
+    }, 1000);
+
+});
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wood Clinic ||physiotherapy and acupuncture clinic in chenai</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <meta name="description" content="Woods Clinic provides treatment to patients suffering from all kinds of physical and psychological problems. Treatment will be provided based upon the ailments through physiotherapy, acupuncture-acupressure, yoga therapy, or flower remedy best applicable for the problem with a holistic approach." />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />     
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+<link rel="manifest" href="./favicon_io/site.webmanifest"> <style>
+      * {
+        scroll-behavior: smooth;
+      }/* Scroll-Up Icon */
+      
+      /* Scroll-Up Icon */
+      #scrollUp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        border-radius: 100%;
+        background-color: green;
+        text-align: center;
+        padding: 10px;
+        z-index: 1000;
+        cursor: pointer;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        width: 50px;
+        height: 50px;
+      }
+      #scrollUp img {
+        width: 30px;
+        height: 30px;
+      }/* Customization for WebKit browsers (Chrome, Safari) */
+/* Targeting only the horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+  height: 10px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background: #f1f1f1; /* Background color of the horizontal scrollbar track */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #daf7a6; /* Color of the horizontal scrollbar handle */
+  border-radius: 10px;
+  border: 2px solid #fff; /* Creates space around the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: #555; /* Handle color when hovered */
+}
+
+/* For Firefox, applying color only to the horizontal scrollbar */
+html {
+  scrollbar-color: initial; /* Reset vertical scrollbar to default */
+}
+
+body {
+  overflow-y: scroll; /* Ensure vertical scrollbar remains unaffected */
+}
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+  background-color: green;
+}
+
+      /* Custom CSS styles */
+      .video {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        width: 350px;
+        height: 350px;
+      }
+      .img
+      {margin-left:80px;
+      margin-top: -10px;
+      width: 200px;}
+      .navbar {
+        background-color: #fff !important;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+      .navbar-nav .nav-link {
+        color: #222 !important;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #799f0c !important;
+      }
+      .book {
+        background-color: green;
+        color: #fff;
+        margin-left: 0px;
+      }
+      .navbar-toggler {
+        background-color: #fff;
+        box-shadow: 0 1px 5px 2px rgba(0, 128, 0, 0.3);
+      }
+      .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      .nav-item.dropdown .nav-link::after {
+        margin-top: 6px; /* Adjust this value to move the icon down */
+      }
+      .card {
+        border-radius: 10px;
+        /* Green box shadow */
+      }
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      .card-text {
+        font-size: 1rem;
+      }
+      .header,
+      .footer {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+      }
+      .card-body {
+        padding: 20px;
+      }
+      .nav-pills .nav-link {
+        border-radius: 5px;
+        transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+      }
+      .custom-badge {
+        display: inline-block;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        color: #000;
+        background-color: #e2eaf7;
+        border-radius: 1.5em;
+        margin: 0.5em;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      .custom-badge:hover {
+        background-color: #bfe9ff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .custom-badge.active {
+        background-color: #a0fd04;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Social Media Icons -->
+    <div class="d-flex align-items-center">
+      <a href="https://youtube.com/@mercythomas7470?si=1Uc7Vuy94geKy8o6" target="_blank" class="text-white mr-3">
+        <i class="fab fa-youtube" style="font-size: 1.5rem; color: red;"></i>
+      </a>
+      <a href="https://www.instagram.com/dr.woodsclinic?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-white mr-3">
+        <i class="fab fa-instagram" style="font-size: 1.5rem; color:#fe0163;"></i>
+      </a>
+      <a href="https://wa.me/919361692951" target="_blank" class="text-white">
+        <i class="fab fa-whatsapp" style="font-size: 1.5rem; color:#2ae660;"></i>
+      </a>
+    </div>
+
+    <!-- Navbar content -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./profile/profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://g.co/kgs/AYyU3gC" target="_blank">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./appoinment/appoinment.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="servicesDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="dropdown-item" href="./services/jointpain.html">Joint and Muscle Pain</a>
+            <a class="dropdown-item" href="./services/diabites.html">Diabetes</a>
+            <a class="dropdown-item" href="./services/BP.html">Blood Pressure</a>
+            <a class="dropdown-item" href="./services/res.html">Respiratory Issues</a>
+            <a class="dropdown-item" href="#service" style="text-decoration: underline; color: green;">More</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="./appoinment/appoinment.html" class="btn btn-primary book">Book Appointment</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Scroll-Up Icon -->
+<a href="#" id="scrollUp">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="mb-4" style="color: #197d2f;">Woods Clinic</h2>
+            <p>
+              Woods Clinic provides treatment to patients suffering from all
+              kinds of physical and psychological problems. Treatment will be
+              provided based upon the ailments through <b> physiotherapy</b>,
+              <b>acupuncture</b>-<b>acupressure</b>, <b>yoga therapy</b>, or <b>flower
+              remedy</b> best applicable for the problem with a holistic approach.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <!-- Profile image -->
+            <img
+              src="./imgs/logo.jpg"
+              alt="woods clinics img"
+              class="img-fluid img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Video Section -->
+    <section id="video" class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Video on the left -->
+          <div class="col-lg-6 text-center">
+            <h2 class="mb-4"style="color:#197d2f;">Watch Our Video</h2>
+            <!-- <iframe
+              class="video"
+              width="907"
+              height="514"
+              src="https://www.youtube.com/embed/T_XQSlLdDpE?autoplay=1&mute=1&controls=1"
+              title="Dr Mercy - Menstrual cramps #periodpain #menstrualcramps #periodcramps"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>-->
+            <video
+              class="video"
+              src="./viedo/intro.mp4"
+            
+              controls
+            ></video>
+          </div>
+          <!-- Consultation details on the right -->
+          <div class="col-lg-6 text-center">
+            <!-- Contact details -->
+                <p><b>Timings:</b></p>
+                <ul style="list-style: none; padding-left: 0;">
+                <li> 9am to 9.30pm</li>
+                    
+                
+                </ul>
+            <p>Mon-Sat</p>
+            <p>Mobile: <a href="tel:+919361692951">+91 93616 92951</a></p>
+
+       <!-- Social Media Icons using Bootstrap -->
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-auto">
+                  <a href="https://youtube.com/@mercythomas7470?si=1Uc7Vuy94geKy8o6" target="_blank">
+                    <i class="fab fa-youtube text-danger" style="font-size:1.5rem;"></i>
+                  </a>
+                </div>
+                <div class="col-auto">
+                  <a href="https://www.instagram.com/dr.woodsclinic?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <i class="fab fa-instagram text-pink" style="font-size:1.5rem; color:#fe0163;"></i>
+                  </a>
+                </div>
+              </div>
+            </div> <br>
+            <h4>
+              <a href="./appoinment/appoinment.html" class="btn btn-primary mt-3"
+                > Online/Offline Consultation</a
+              >
+            </h4>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="service" class="py-5">
+          <!-- Service 3 -->
+          
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <!-- Services as pills -->
+            <div class="nav nav-pills mb-4 justify-content-center">
+              <span class="custom-badge text-center " ><a href="./services/jointpain.html" style="color: #000;text-decoration: underline ; text-decoration: underline   ;">Joint and Muscle Pain</a> </span>
+              <span class="custom-badge text-center"><a href="./services/diabites.html" style="color: #000; text-decoration: underline ; ">Diabetes</a></span>
+              <span class="custom-badge text-center"><a href="./services/BP.html"style="color: #000;text-decoration: underline ;" >Blood Pressure</a></span>
+              <span class="custom-badge text-center"><a href="./services/res.html" style=" color: #000;text-decoration: underline ;">Respiratory Problems</a></span>
+              <span class="custom-badge text-center"><a href="./services/pscyological.html" style="color: #000;text-decoration: underline ;">Psychological Problems</a></span>
+              <span class="custom-badge text-center"><a href="./services/insomina.html" style="color: #000;text-decoration: underline ;">Insomnia</a></span>
+              <span class="custom-badge text-center"><a href="./services/gastric.html" style="color: #000;text-decoration: underline ;">Gastritis and Gut Problems</a></span>
+              <span class="custom-badge text-center"><a href="./services/other.html" style="color: #000;text-decoration: underline ;">Others</a></span>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2024 Woods Clinic. All Rights Reserved. 
+   <!--       <a href="#" class="text-light">Privacy Policy</a> |
+          <a href="#" class="text-light">Terms of Service</a>   -->
+        </p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+  // Handle active effect on click
+  $(".custom-badge a").on("click", function () {
+    $(".custom-badge").removeClass("active"); // Remove active class from all
+    $(this).parent().addClass("active"); // Add active class to the clicked badge's parent
+    sessionStorage.setItem("activeBadge", $(this).attr("href")); // Store the clicked link in session storage
+  });
+
+  // Apply active state based on stored value
+  var activeBadge = sessionStorage.getItem("activeBadge");
+  if (activeBadge) {
+    $(".custom-badge a[href='" + activeBadge + "']").parent().addClass("active");
+  }
+});
+// Show/Hide Scroll-Up Icon
+window.onscroll = function () {
+  const scrollUp = document.getElementById("scrollUp");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollUp.style.display = "block";
+  } else {
+    scrollUp.style.display = "none";
+  }
+};
+
+// Scroll to Top When Icon is Clicked
+document.getElementById("scrollUp").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+    </script>
+  </body>
+</html>
