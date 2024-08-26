@@ -206,7 +206,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-             document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+
+                     document.getElementById("appointmentForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
@@ -234,7 +235,7 @@
   const ownerWhatsApp = "+919361692951";
   const userWhatsApp = mobile; // Assuming this is the user's WhatsApp number
 
-  const bookingDetails = `Booking Details for Woods clinic:
+  const bookingDetails = `Booking Detailss for Woods clinic:
     Name: ${name}
     Mobile: ${mobile}
     Day: ${slot}
@@ -252,16 +253,14 @@
 
   // Send details to owner's WhatsApp
   const whatsAppUrl = isDesktop()
-    ? `https://web.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`
-    : `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
+    `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
 
   window.open(whatsAppUrl, "_blank");
 
   // Send details to user's WhatsApp after a short delay
   setTimeout(function () {
     const userWhatsAppUrl = isDesktop()
-      ? `https://web.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`
-      : `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
+   `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
 
     window.open(userWhatsAppUrl, "_blank");
 
@@ -269,7 +268,6 @@
     document.getElementById("appointmentForm").reset();
   }, 1000);
 });
-
     </script>
 
 </body>
