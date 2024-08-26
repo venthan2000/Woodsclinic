@@ -206,68 +206,68 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
+document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-                     document.getElementById("appointmentForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const slot = document.getElementById("slot").value;
+    const slot_2 = document.getElementById("slot_2").value;
+    const slot_3 = document.getElementById("slot_3").value;
 
-  const name = document.getElementById("name").value;
-  const mobile = document.getElementById("mobile").value;
-  const slot = document.getElementById("slot").value;
-  const slot_2 = document.getElementById("slot_2").value;
-  const slot_3 = document.getElementById("slot_3").value;
+    // Check if the user selected the default option
+    if (slot === "Select") {
+        alert("Please select a valid day.");
+        return;
+    }
 
-  // Check if the user selected the default option
-  if (slot === "Select") {
-    alert("Please select a valid day.");
-    return;
-  }
+    if (slot_2 === "Select") {
+        alert("Please select a valid time slot.");
+        return;
+    }
 
-  if (slot_2 === "Select") {
-    alert("Please select a valid time slot.");
-    return;
-  }
+    if (slot_3 === "Select") {
+        alert("Please select a valid mode.");
+        return;
+    }
 
-  if (slot_3 === "Select") {
-    alert("Please select a valid mode.");
-    return;
-  }
+    const ownerWhatsApp = "+919361692951";
+    const userWhatsApp = mobile; // Assuming this is the user's WhatsApp number
 
-  const ownerWhatsApp = "+919361692951";
-  const userWhatsApp = mobile; // Assuming this is the user's WhatsApp number
+    const bookingDetails = `Booking Details:
+        Name: ${name}
+        Mobile: ${mobile}
+        Day: ${slot}
+        Time Slot: ${slot_2}
+        Mode: ${slot_3}`;
 
-  const bookingDetails = `Booking Detailss for Woods clinic:
-    Name: ${name}
-    Mobile: ${mobile}
-    Day: ${slot}
-    Time Slot: ${slot_2}
-    Mode: ${slot_3}`;
+    alert("Please click the WhatsApp web option if you are using desktop on the next step!");
 
-  alert(
-    "Please click the WhatsApp web option if you are using desktop on the next step!"
-  );
+    // Function to detect if the user is on a desktop
+    function isDesktop() {
+        return !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+    }
 
-  // Function to detect if the user is on a desktop
-  function isDesktop() {
-    return !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-  }
+    // Send details to owner's WhatsApp
+    const whatsAppUrl = isDesktop() ? 
+        `https://web.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
+        `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
+    
+    window.open(whatsAppUrl, "_blank");
 
-  // Send details to owner's WhatsApp
-  const whatsAppUrl = isDesktop()
-    `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
-
-  window.open(whatsAppUrl, "_blank");
-
-  // Send details to user's WhatsApp after a short delay
-  setTimeout(function () {
-    const userWhatsAppUrl = isDesktop()
-   `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
-
-    window.open(userWhatsAppUrl, "_blank");
-
-    // Reset the form
-    document.getElementById("appointmentForm").reset();
-  }, 1000);
+    // Send details to user's WhatsApp after a short delay
+    setTimeout(function () {
+        const userWhatsAppUrl = isDesktop() ? 
+            `https://web.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
+            `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
+        
+        window.open(userWhatsAppUrl, "_blank");
+        
+        // Reset the form
+        document.getElementById("appointmentForm").reset();
+    }, 1000);
 });
+
     </script>
 
 </body>
