@@ -206,7 +206,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+        document.getElementById("appointmentForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -232,16 +232,14 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
     }
 
     const ownerWhatsApp = "+919361692951";
-    const userWhatsApp = mobile; // Assuming this is the user's WhatsApp number
-
-    const bookingDetails = `Booking Detailss:
+    const bookingDetails = `Booking Details:
         Name: ${name}
         Mobile: ${mobile}
         Day: ${slot}
         Time Slot: ${slot_2}
         Mode: ${slot_3}`;
 
-    alert("Please click the WhatsApp web option if you are using desktop on the next step!");
+    alert("Please click the WhatsApp web option if you are using a desktop on the next step!");
 
     // Function to detect if the user is on a desktop
     function isDesktop() {
@@ -255,10 +253,10 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
     
     window.open(whatsAppUrl, "_blank");
 
-        // Reset the form
-        document.getElementById("appointmentForm").reset();
-    }, 1000);
+    // Reset the form
+    document.getElementById("appointmentForm").reset();
 });
+
     </script>
 
 </body>
