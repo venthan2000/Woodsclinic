@@ -253,19 +253,20 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
         `https://web.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
         `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
     
-    
+    window.open(whatsAppUrl, "_blank");
+
     // Send details to user's WhatsApp after a short delay
     setTimeout(function () {
         const userWhatsAppUrl = isDesktop() ? 
             `https://web.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
             `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
         
-       
+        window.open(userWhatsAppUrl, "_blank");
+        
         // Reset the form
         document.getElementById("appointmentForm").reset();
     }, 1000);
 });
-
     </script>
 
 </body>
