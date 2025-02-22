@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+sitemap:https://woodsclinic.online/sitemap3.xml
